@@ -6,7 +6,7 @@ qbit::Array - Functions to manipulate arrays.
 
 package qbit::Array;
 {
-  $qbit::Array::VERSION = '0.7';
+  $qbit::Array::VERSION = '0.9';
 }
 
 use strict;

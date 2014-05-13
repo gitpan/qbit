@@ -1,3 +1,4 @@
+
 =head1 Name
 
 qbit::File - Functions to manipulate files.
@@ -6,12 +7,14 @@ qbit::File - Functions to manipulate files.
 
 package qbit::File;
 {
-  $qbit::File::VERSION = '0.7';
+  $qbit::File::VERSION = '0.9';
 }
 
 use strict;
 use warnings;
 use utf8;
+
+require qbit::StringUtils;
 
 use base qw(Exporter);
 
@@ -60,7 +63,7 @@ B<Return value:> string, file content.
 sub readfile($;%) {
     my ($filename, %opts) = @_;
 
-    open(my $fh, '<', $filename) || die "Cannot open file \"$filename\": $!";
+    open(my $fh, '<', $filename) || die "Cannot open file \"$filename\": " . qbit::StringUtils::fix_utf($!);
     $opts{'binary'} ? binmode($fh) : binmode($fh, ':utf8');
     my $data = join('', <$fh>);
     close($fh);
@@ -101,7 +104,7 @@ B<binary> - boolean, binary ? C<binmode($fh)> : C<binmode($fh, ':utf8')>.
 sub writefile($$;%) {
     my ($filename, $data, %opts) = @_;
 
-    open(my $fh, '>', $filename) || die "Cannot open file \"$filename\" for write: $!";
+    open(my $fh, '>', $filename) || die "Cannot open file \"$filename\" for write: " . qbit::StringUtils::fix_utf($!);
     $opts{'binary'} ? binmode($fh) : binmode($fh, ':utf8');
     print $fh $data;
     close($fh);

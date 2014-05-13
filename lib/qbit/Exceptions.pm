@@ -6,7 +6,7 @@ qbit::Exceptions - qbit exceptions
 
 package qbit::Exceptions;
 {
-  $qbit::Exceptions::VERSION = '0.7';
+  $qbit::Exceptions::VERSION = '0.9';
 }
 
 =head1 Synopsis
@@ -167,7 +167,7 @@ sub throw($) {
 
 package Exception;
 {
-  $Exception::VERSION = '0.7';
+  $Exception::VERSION = '0.9';
 }
 
 use strict;
@@ -189,7 +189,7 @@ sub new {
 
         package DB;
 {
-  $DB::VERSION = '0.7';
+  $DB::VERSION = '0.9';
 }
         my ($package, $filename, $line, $subroutine, $hasargs, $wantarray, $evaltext, $is_require, $hints, $bitmask) =
           caller($i);
@@ -261,7 +261,7 @@ sub as_string {
 
 package Exception::SysDie;
 {
-  $Exception::SysDie::VERSION = '0.7';
+  $Exception::SysDie::VERSION = '0.9';
 }
 
 use base qw(Exception);
@@ -279,13 +279,13 @@ sub new {
 
 package Exception::BadArguments;
 {
-  $Exception::BadArguments::VERSION = '0.7';
+  $Exception::BadArguments::VERSION = '0.9';
 }
 use base qw(Exception);
 
 package Exception::Denied;
 {
-  $Exception::Denied::VERSION = '0.7';
+  $Exception::Denied::VERSION = '0.9';
 }
 use base qw(Exception);
 

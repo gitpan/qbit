@@ -75,7 +75,7 @@ Using this pragma is equivalent:
 
 package qbit;
 {
-  $qbit::VERSION = '0.7';
+  $qbit::VERSION = '0.9';
 }
 
 use strict;

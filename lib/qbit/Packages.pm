@@ -1,3 +1,4 @@
+
 =head1 Name
 
 qbit::Packages - Functions to manipulate data in packages.
@@ -6,7 +7,7 @@ qbit::Packages - Functions to manipulate data in packages.
 
 package qbit::Packages;
 {
-  $qbit::Packages::VERSION = '0.7';
+  $qbit::Packages::VERSION = '0.9';
 }
 
 use strict;
@@ -16,6 +17,7 @@ use utf8;
 use base qw(Exporter);
 
 use Data::Dumper;
+require qbit::StringUtils;
 
 BEGIN {
     our (@EXPORT, @EXPORT_OK);
@@ -24,10 +26,10 @@ BEGIN {
       package_sym_table
       package_stash
       package_merge_isa_data
+      require_class
       );
     @EXPORT_OK = @EXPORT;
 }
-
 
 =head1 Functions
 
@@ -54,7 +56,6 @@ sub package_sym_table($) {
     return \%{$package . '::'};
 }
 
-
 =head2 package_stash
 
 B<Arguments:>
@@ -78,7 +79,6 @@ sub package_stash($) {
     *{$package . '::QBitStash'} = {} unless *{$package . '::QBitStash'};
     return \%{$package . '::QBitStash'};
 }
-
 
 =head2 package_merge_isa_data
 
@@ -134,6 +134,33 @@ sub package_merge_isa_data {
     }
 
     $func->($package, $res);
+}
+
+=head2 require_class
+
+B<Arguments:>
+
+=over
+
+=item
+
+B<$class> - string, class name.
+
+=back
+
+Convert class name to .pm file path and require it.
+
+B<Return value:> return value of CORE::require if all is Ok or throw Exception if cannot load .pm file.
+
+=cut
+
+sub require_class {
+    my ($class) = @_;
+
+    $class = "$class.pm";
+    $class =~ s/::/\//g;
+
+    return require($class) || die die "Cannot requre file \"$class\": " . qbit::StringUtils::fix_utf($!);
 }
 
 1;

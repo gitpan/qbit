@@ -6,7 +6,7 @@ qbit::Log - Functions to logging
 
 package qbit::Log;
 {
-  $qbit::Log::VERSION = '0.7';
+  $qbit::Log::VERSION = '0.9';
 }
 
 use strict;

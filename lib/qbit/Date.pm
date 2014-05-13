@@ -7,7 +7,7 @@ qbit::Array - Functions to manipulate dates.
 
 package qbit::Date;
 {
-  $qbit::Date::VERSION = '0.7';
+  $qbit::Date::VERSION = '0.9';
 }
 
 use strict;

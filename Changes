@@ -1,10 +1,63 @@
 ==================================================
-Changes from 2013-04-25 00:00:00 +0000 to present.
+Changes from 2013-05-13 00:00:00 +0000 to present.
 ==================================================
 
 ----------------------------------------
-version 0.7 at 2014-04-25 12:50:32 +0000
+version 0.9 at 2014-05-13 11:25:43 +0000
 ----------------------------------------
+
+  Change: 02c9c4b2189cfd674c503c499bd58ca70cf3cd36
+  Author: Sergei Svistunov <sergei-svistunov@yandex.ru>
+  Date : 2014-05-13 14:49:32 +0000
+
+    Merge pull request #9 from
+    wtertius/throw_simple_exception_in_from_json
+
+    Throw simple message from from_json sub. 
+
+  Change: cb7904e2fb83be12ecc3d002f7db734fd8d8ad39
+  Author: Dmitry Lukiyanchuk <tertius@yandex-team.ru>
+  Date : 2014-05-13 14:41:34 +0000
+
+    Fix test to the code change. 
+
+  Change: 27989cdec29bb4b3cef2c283bd4987f3fc2916d1
+  Author: Dmitry Lukiyanchuk <tertius@yandex-team.ru>
+  Date : 2014-05-13 14:35:16 +0000
+
+    Throw simple message from from_json sub. 
+
+----------------------------------------
+version 0.8 at 2014-05-12 17:23:28 +0000
+----------------------------------------
+
+  Change: 9ed42f0278634df4e134848f7630fdd47824e2a5
+  Author: Sergei Svistunov <sergei-svistunov@yandex.ru>
+  Date : 2014-05-12 21:23:28 +0000
+
+    Version 0.8 
+
+  Change: e8f35693e72f3d202117cd4737a3287675ecf5f1
+  Author: Sergei Svistunov <sergei-svistunov@yandex.ru>
+  Date : 2014-05-12 21:22:18 +0000
+
+    Fixed error messages 
+
+  Change: 97d30e43dcf05d5caf29539e33be5d2b19fad689
+  Author: Sergei Svistunov <sergei-svistunov@yandex.ru>
+  Date : 2014-05-12 15:44:50 +0000
+
+    Added require_class function 
+
+----------------------------------------
+version 0.7 at 2014-04-25 12:50:51 +0000
+----------------------------------------
+
+  Change: 673ac3f89d4b249564a44a9260e66044234b2c50
+  Author: Sergei Svistunov <sergei-svistunov@yandex.ru>
+  Date : 2014-04-25 16:50:51 +0000
+
+    Version 0.7 
 
   Change: 7a6c36945b14875b494b14653cf4c7bf424e9256
   Author: Sergei Svistunov <sergei-svistunov@yandex.ru>

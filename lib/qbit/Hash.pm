@@ -6,7 +6,7 @@ qbit::Hash - Functions to manipulate hashes.
 
 package qbit::Hash;
 {
-  $qbit::Hash::VERSION = '0.7';
+  $qbit::Hash::VERSION = '0.9';
 }
 
 use strict;
